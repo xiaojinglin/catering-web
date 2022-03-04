@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block button %}
+    <a class="btn" href="{{ url_for('index') }}">
+        <i class="fa-solid fa-circle-arrow-left"></i>
+        menu
+    </a>
+    <a class="btn" href="{{ url_for('show_order') }}">
+        <i class="fa-solid fa-circle-arrow-left"></i>
+        Edit
+    </a>
+{% endblock %}
+{% block content %}
+    <section id="form">
+        <form action="{{ url_for('finish')}}"  method="POST">           
+            <div class="columns">             
+                <div class="form-container">
+                    <table>
+                        {% for order in orders %}
+                        <tr>
+                            <td for="name">{{ order.name }}</td>
+                            <td for="price">{{ order.price/100 }}</td>
+                            <td for="qty">{{ order.qty }}</td>
+                            <td for="amount">{{ order.price/100*order.qty }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>                           
+                </div>
+                <div class="form-container">
+                    <label for="total">Total</label>
+                    <label for="total">{{ total }}</label>
+                </div>
+                <div class="form-container">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required>
+                </div>
+                <div class="form-container">
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="text" placeholder="5022221111" required pattern="[0-9]{10}">
+                </div>
+                <button type="submit">Pay</button>
+            </div>
+        </form>
+    </section>
+{% endblock %}

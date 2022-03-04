@@ -1,0 +1,362 @@
+/* Project Styles */
+
+:root {
+    --primary: #272343;
+    --secondary: #BAE8E8;
+    --accent: #FFD803;
+    --background: #FFFFFE;
+}
+
+* {
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+}
+
+h1, 
+h2, 
+h3, 
+p, 
+button, 
+a,
+label,
+legend {
+    color: var(--primary);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header Styles */
+
+.header i, 
+.card i {
+    color: var(--secondary);
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.main-header h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 40px;
+}
+
+
+.main-header .btn {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    background: var(--accent);
+    border-radius: 20px;
+    border: none;
+    width: 143px;
+    height: 40px;
+}
+
+
+.main-header .btn {
+    padding: 10px 15px 10px 15px;
+}
+.main-header .btn i.fa-plus {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    position: relative;
+    bottom: 2px;
+    margin-right: 5px;
+}
+
+/* Homepage - Card Style */
+.desc,
+.card {
+    margin: auto;
+    position: relative;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+    width: 292px;
+    height: 310px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
+th, td {
+	text-align: center;
+	padding: 12px;
+}
+.desc {
+    width: 400px;
+    height: 100px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+
+
+.card img {
+    width: 292px;
+    height: 250px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: none;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.card h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 32px;
+    margin-top: 18px;
+    padding-bottom: 5px;
+}
+
+.card h3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: right;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.card p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    margin-left: 32px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    width: 228px;
+    height: 40px;
+    overflow: hidden;
+}
+
+/* Form Styles */
+
+
+
+#form {
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+#form .form-container {
+    width: fit-content;
+    margin: auto;
+}
+
+#form .form-container input {
+    display: block;
+    height: 61px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    border: 2px solid var(--secondary);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+#form .form-container label {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    width: 40px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--secondary);
+}
+
+
+#form #form-buttons {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+#form button {
+    width: 100px;
+    height: 47px;
+    background: none;
+    border-radius: 20px;
+    margin: auto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+
+#form button[type="submit"] {
+    border: none;
+    background-color: var(--accent);
+}
+
+
+@keyframes bounce {
+    0% {
+        transform: translate3d(0,0,0);
+    }
+    10% {
+        transform: translate3d(0,-200px,0);
+    }
+    30% {
+        transform: translate3d(0,0,0);
+    }
+    40% {
+        transform: translate3d(0,-100px,0);
+    }
+    60% {
+        transform: translate3d(0,0,0);
+    }
+    70% {
+        transform: translate3d(0,-50px,0);
+    }
+    75% {
+        transform: translate3d(0,0,0);
+    }
+    85% {
+        transform: translate3d(0,-25px,0);
+    }
+    90% {
+        transform: translate3d(0,0,0);
+    }
+    95% {
+        transform: translate3d(0,-10px,0);
+    }
+    100% {
+        transform: translate3d(0,0,0);
+    }
+}
+
+#not-found h2 i {
+    margin-left: 20px;
+    color: var(--accent);
+    animation: bounce 1.5s cubic-bezier(.5,0.05,1,.5);
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+#not-found a {
+    text-decoration: none;
+    width: 200px;
+    height: 60px;
+    padding: 10px 15px;
+}
+
+#not-found .fa-bone {
+    font-size: 14px;
+    transform: translateX(-12px) translateY(10px) rotate(135deg);
+}
+
+
+
+
+
+/* Desktops and Laptops */
+
+@media (min-width: 1024px){
+
+    .main-header h1 {
+        display: inline-block;
+        margin-right: 100px;
+    }
+
+    /* Homepage Page */
+
+    #filter #filter-button {
+        display: none;
+    }
+
+    #filter .filters {
+        display: inline-block;
+    }
+
+    #filter .filters {
+        margin-bottom: 50px;
+    }
+}
+
+    /* Form Page */
+
+    #form .columns {
+        width: 75%;
+        margin: auto;
+        text-align: center;
+    }
+
+    #form .form-container {
+        text-align: left;
+    }
+
+    #form .col1 {
+        margin-right: 50px;
+    }
+    #form fieldset {
+        width: 100%;
+    }
+
+    #form #descr{
+        width: 75%;
+    }
+
+
+/* Desktop Screens */
+
+@media (min-width: 1224px){
+
+    /* Form Page */
+
+    #form .col1, #form .col2 {
+        display: inline-block;
+    }
+
+    /* Headers */
+
+    .main-header h1 {
+        margin-right: 400px;
+    }
+}
+
+/* Large Screens */
+
+@media (min-width: 1824px){
+
+    .main-header h1 {
+        margin-right: 600px;
+    }
+
+    /* Form Page */
+
+    #form #descr {
+        width: 45%;
+    }
+
+}

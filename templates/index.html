@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block button %}
+    <a class="btn" href="{{ url_for('check_out') }}" alt="Check Out">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Check out
+    </a>
+{% endblock %}
+{% block content %}
+    <section id="dish-cards">
+        {% for dish in dishes %}
+            <a href="{{ url_for('dish', id=dish.id) }}">
+                <div class="card">
+                    <img src="{{ dish.url }}" alt="{{ dish.alt }}">
+                    <h2>{{ dish.name }}</h2>
+                    <h3>{{ dish.price/100 }}</h3>
+                </div>
+            </a>
+        {% endfor %}
+    </section>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block button %}
+    <a class="btn" href="{{ url_for('index') }}">
+        <i class="fa-solid fa-circle-arrow-left"></i>
+        menu
+    </a>
+    <a class="btn" href="{{ url_for('show_order') }}">
+        <i class="fa-solid fa-circle-arrow-left"></i>
+        Edit
+    </a>
+{% endblock %}
+
+{% block content %}
+    <section id="dish-data">
+        <div class="card">
+            <img src="{{ dish.url }}" alt="{{ dish.alt }}">
+            <h2>{{ dish.name }}</h2>
+            <h3>{{ dish.price/100 }}</h3>
+        </div>
+        <div class="desc">
+            <h2>Ingredients:</h2>
+            <p>{{ dish.ingredients}}</p>
+        </div>
+    </section>
+    <section id="form">
+        <form action="{{ url_for('add_order', id=dish.id) }}" method="POST">
+            <div class="form-container">
+                <label for="qty">Qty</label>
+                <input id="qty" name="qty" type="number" value="1" required pattern="[0-9]+">
+            </div>
+            <div id="form-buttons">
+                <button type="summit" name="summit_order" value="Summit">Summit</button>
+                <button type="submit" name="summit_order" Value="'Cancel">Cancel</button>
+            </div>
+        </form>
+    </section>
+    <script src="/static/js/app.js" async defer></script>
+
+{% endblock %}
+

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block button %}
+    <a class="btn" href="{{ url_for('index') }}">
+        <i class="fas fa-caret-left"></i>
+        menu
+    </a>
+    <a class="btn" href="{{ url_for('check_out') }}" alt="Check Out">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Check out
+    </a>
+{% endblock %}
+{% block content %}
+    <section id="form">
+        {% for order in orders %}
+        <form action="{{ url_for('edit_order', id=order.id) }}" method="POST">
+            <div class="form-container">
+                <table>                   
+                    <tr>
+                        <td for="name">{{ order.name }}</td>                       
+                        <td for="qty"><input id="qty" name="qty" type="text" value="{{ order.qty }}" required pattern="[0-9]+"></td>
+                        <td>
+                            <button type="summit" name="edit_del" value="Edit">Edit</button>
+                            <button type="submit" name="edit_del" Value="'Delete">Delete</button>
+                        </td>
+                    </tr>                   
+                </table>                           
+            </div>
+        </form>
+        {% endfor %}
+    </section>
+{% endblock %}
