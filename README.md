@@ -19,7 +19,7 @@ This is an website that customer can order food. It's based on Python flask and 
 <h2 id="requirements">Requirements</h2>
 <p>catering web requires the following to run:</p>
 <ul>
-  <li>python</li>
+  <li>python sqlite</li>
   <li>flask</li>
   <li>sqlalchemy</li>
 </ul>
